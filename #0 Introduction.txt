@@ -21,3 +21,24 @@ $npm-v
 그리고 expo계정을 만드는 것을 추천한다. 엑스포 계정을 만들고 폰에다가 설치해놓자.
 다 한다음에 React native 웹사이트로 와서
 $npm install -g  expo-cli
+
+
+
+#0 2 Expo vs RN CLI
+
+expo가 뭐지? 리액트 네이티브랑 어떤 관련이 있을까?  
+기본적으로 expo는 create-react-app이다. 리액트 네이티브를 위한 설정 파일 같은것들이 없는 방식으로, 모든 것이 셋업 되어있다.
+만약에 리엑트 네이티브를 수동으로 작업하고 싶다면, 여기 React Native CLI를 클릭해야한다. CLI(커맨드라인 인터페이스)
+React native CLI 방식은 너가 native files들을 더 많이 컨트롤 하고 싶을 때를 위한것이다.
+니콜라스는 항상 expo를 통해서 만든다. expo는 모든 native files들을 감추고 모든걸 관리해준다.
+expo의 장점은 나의 폰에서 테스트가 가능하다.
+expo앱 덕분에 정말 빠르게 가능하다. expo의 유일한 문제점은, native files들을 크게 제어 할 수 없다는 것이다. 기본적으로 expo팀에 달린것이다.
+니콜라스는 expo로 작업하면서, 어떤 문제도 없었고, expo는 그가 가장 좋아하는 리액트 네이티브 작업 방식이다.
+React Native CLI 로 작업을 해본적이 있었는데 엄청 많은 버그들을 발견했고, expo가 그냥 훨씬 훨씬 더 좋은 경험이었다.
+이제 expo가 여기있고 빠르게 로그인해보자. expo는 더 나은 개발자 경험을 제공하고, 너가 앱을 만드는 방식을 처리해준다.
+simulation을 처리하고, react native 업데이트도 처리해주고, 문서도 정말 잘 되어 있다. react native에 더 많은 모듈들이 있다.
+하지만 expo는 더 많이 지원한다. 예를 들면, payment를 지원하고, printing을 지원하고, sensor, storereviews,barcodescanner 등등을 지원한다.
+만약에 내가 이 모든 모듈들을 작동하게 만드려면, react natvie cli 에서는 내가 수동적으로 다 설치해야한다. 
+하지만 한계가있다. 
+니콜라스가 만난 80%의 리액트 네이티브 개발자들은 native files이 그렇게 많이 필요가 없다고 하는것을 느꼈다. 대부분의 큰회사들은
+native file이 필요할것이다.
