@@ -41,4 +41,35 @@ simulation을 처리하고, react native 업데이트도 처리해주고, 문서
 만약에 내가 이 모든 모듈들을 작동하게 만드려면, react natvie cli 에서는 내가 수동적으로 다 설치해야한다. 
 하지만 한계가있다. 
 니콜라스가 만난 80%의 리액트 네이티브 개발자들은 native files이 그렇게 많이 필요가 없다고 하는것을 느꼈다. 대부분의 큰회사들은
-native file이 필요할것이다.
+native file이 필요할것이다.근데 일반적으로 expo면 충분하도고 생각한다. expo로 작업하면서 절대 문제가 생겼던 적은 없었다 또한 expo가 building process를 처리해줄것이다.
+
+
+
+#0 3 Creating the Project
+
+엑스포로 프로젝트를 시작하려면, Documents로 가서 아니면 니가 원하는 경로로 가서, expo init[프로젝트명] 실행해 
+우리는
+$ expo init fokin-weather
+이렇게하면 두가지를 물어볼것이다.
+blacnk(TypeScript) or Tabs or bare-minimum. 이건 왜냐면 expo가 자동 생성 할수 있기 때문이다. 이번에는 그냥 blank를 선택 할것이다. zero 부터 시작할것이다.
+만약에 예를 들어 스크린들을 이미 가지고 있는 앱을 가졌을 때 그건 탭들을 가지게 될것이고, 그럼 탭을 선택하고,  만약에 내가 경험자라면
+ TypeScript를 선택하고, 우리는 초보자니까. blank를 선택하자. 그러면 생성이 완료될것이다.
+그리고 프로젝트를 한번 살펴보도록 하자.
+package.json은 우리가 무엇인지 알고, babel.config 이건 건드리지 말자 그리고 app.json 이것이 configuration 파일인데 그러니까 expo가 읽게될것이다. 
+이런게 있을 것이다. 
+platforms: ios, android ,web			//여기서 web은 베타 서포트이고
+version,orientation,splash screen.. ios는 태블릿을 지원하고
+내가 할수 있는 훨씬 더 많은 설정들이 있다.  근데 이 파일을 expo가 읽는 것이고
+app.js - 기본적인 리액트 컴포넌트 인데 살짝 다르다.
+
+expo 어플리케이션을 시작해보자. 시작을 위해서 npm start 또는 yarn start
+자동으로 export DEV tools를 오픈 해줄 것이다. 여기 보듯이 tunnel, Metro bundler을 자동으로 시작할 것이다.
+여기보면 , QR코드가 있다 안드로이드폰이 QR코드를 스캔하기 때문이다.
+Expo 애플리케이션이 폰에서, 프로젝트를 열고, 넌 앱을 폰에서 테스트 해볼수 있다.
+ 
+ios에는 QR코드가 없다 그래서 뭘해야하냐면 expo앱으로 너의 ios앱으로 로그인한 후에
+$expo login
+username과 password를 요청할것이다.  
+끝
+expo 덕분에, 우리는 expo 프로젝트를 니 컴퓨터에서 볼수 있고, ios애플리케이션을 너의 컴퓨터에서, 폰에서 오픈할수있다.
+만약에 너의 컴퓨터에서 테스트 안할거라면 Run on iOS simulator 또는 Run on Android device/emulator를 클릭하면 된다.
